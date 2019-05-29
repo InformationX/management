@@ -27,7 +27,7 @@ header ('Content-Type: text/html; charset=UTF-8');
 
 		<header>
 			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-				<a class="navbar-brand" href="#">物品管理TOP</a>
+				<a class="navbar-brand" href="./index.php">物品管理TOP</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -36,7 +36,7 @@ header ('Content-Type: text/html; charset=UTF-8');
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">測定器</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown05">
-								<a class="dropdown-item" href="#">棚卸し</a>
+								<a class="dropdown-item" href="./measure_inventory.php">棚卸し</a>
 								<a class="dropdown-item disabled" href="#">持ち出し管理</a>
 								<a class="dropdown-item disabled" href="#">予約</a>
 								<a class="dropdown-item disabled" href="#">登録・廃棄</a>
@@ -77,7 +77,7 @@ header ('Content-Type: text/html; charset=UTF-8');
 
 		<main role="main">
 
-			<div class="container-fluid marketing">
+			<div class="container-fluid">
 
 				<div class="row">
 					<div class="col-lg-12 mt-5 mb-5 text-center">
@@ -91,28 +91,28 @@ header ('Content-Type: text/html; charset=UTF-8');
 				<!-- Three columns of text below the carousel -->
 				<div class="row">
 					<div class="col-sm-3 text-center">
-						<img src="./img/img_measure.png" alt="Generic placeholder image" width="140" height="140">
+						<a href="#measure"><img src="./img/img_measure.png" alt="Generic placeholder image" width="140" height="140"></a>
 						<h2>測定器</span></h2>
 						<div class="col-sm-9 mx-auto">
 							<p><a class="btn btn-secondary btn-block" href="#measure" role="button">移動する<br><img src="https://icongr.am/feather/arrow-down-circle.svg?size=16&color=ffffff" /></a></p>
 						</div>
 					</div><!-- /.col-lg-4 -->
 					<div class="col-sm-3 text-center">
-						<img src="./img/img_sample.png" alt="Generic placeholder image" width="140" height="140">
+						<a href="#sample"><img src="./img/img_sample.png" alt="Generic placeholder image" width="140" height="140"></a>
 						<h2>サンプル</h2>
 						<div class="col-sm-9 mx-auto">
 							<p><a class="btn btn-secondary btn-block" href="#sample" role="button">移動する<br><img src="https://icongr.am/feather/arrow-down-circle.svg?size=16&color=ffffff" /></a></p>
 						</div>
 					</div><!-- /.col-lg-4 -->
 					<div class="col-sm-3 text-center">
-						<img src="./img/img_parts.png" alt="Generic placeholder image" width="140" height="auto">
+						<a href="#parts"><img src="./img/img_parts.png" alt="Generic placeholder image" width="140" height="auto"></a>
 						<h2>部品</h2>
 						<div class="col-sm-9 mx-auto">
 							<p><a class="btn btn-secondary btn-block" href="#parts" role="button">移動する<br><img src="https://icongr.am/feather/arrow-down-circle.svg?size=16&color=ffffff" /></a></p>
 						</div>
 					</div><!-- /.col-lg-4 -->
 					<div class="col-sm-3 text-center">
- 					 <img src="./img/img_pc.png" alt="Generic placeholder image" width="140" height="auto">
+ 					 <a href="#pc"><img src="./img/img_pc.png" alt="Generic placeholder image" width="140" height="auto"></a>
  					 <h2>IT資産</h2>
 					 <div class="col-sm-9 mx-auto">
 						 <p><a class="btn btn-secondary btn-block" href="#pc" role="button">移動する<br><img src="https://icongr.am/feather/arrow-down-circle.svg?size=16&color=ffffff" /></a></p>
@@ -127,7 +127,7 @@ header ('Content-Type: text/html; charset=UTF-8');
 
 				<!-- ここから測定器管理メニュー -->
 				<div class="row featurette" id="measure">
-					<div class="container-fluid bg-primary-pale  text-center">
+					<div class="container-fluid bg-primary-pale text-center">
 						<h2 class="featurette-heading mt-7 mb-5">測定器を管理する</h2>
 							<div class="card-deck mt-3 mb-3">
 
@@ -141,7 +141,7 @@ header ('Content-Type: text/html; charset=UTF-8');
 											<li>棚卸し状況を確認する</li>
 											<li>未完了の測定器を表示する</li>
 										</ul>
-										<button type="button" class="btn btn-lg btn-block btn-primary">棚卸しをはじめる</button>
+										<button type="button" class="btn btn-lg btn-block btn-primary" onclick="location.href='./measure_inventory.php'">棚卸しをはじめる</button>
 									</div>
 								</div>
 
