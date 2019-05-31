@@ -3,16 +3,17 @@
 require_once __DIR__ . '/functions.php';
 require_unlogined_session();
 
-//$usernameと$passwordにPOSTされた値を格納
-foreach (['employee_id','password'] as $key) {
-    $$key = filter_input(INPUT_POST, $key);
-}
+
 
 // エラーを格納する配列を初期化
 $errors = "初回のみ、任意の暗証番号でログインすると登録されます。";
 
 // POSTのときのみ実行
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+	//$usernameと$passwordにPOSTされた値を格納
+	foreach (['employee_id','password'] as $key) {
+		$$key = filter_input(INPUT_POST, $key);
+	}
 	//(実際にはフォームで弾かれるが)社員番号またはパスワードが空欄のときはエラーで弾く。
 	if ( $employee_id === "" || $password ==="" ) {
 		$errors = "ユーザ名またはパスワードが入力されていません。";
